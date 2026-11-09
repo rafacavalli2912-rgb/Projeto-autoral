@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cozinha & Afeto | Receitas Didáticas & Acolhedoras</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <!-- HEADER & NAVIGATION -->
+  <header class="header">
+    <div class="header-container">
+      <a href="#" class="brand-logo">
+        <span class="logo-icon">🍳</span>
+        <div class="logo-text">
+          <span class="brand-name">Cozinha & Afeto</span>
+          <span class="brand-sub">Comida de verdade no seu dia a dia</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="#receitas" class="nav-link active">Receitas</a>
+        <a href="#colecoes" class="nav-link">Coleções</a>
+        <a href="#dicas" class="nav-link">Truques da Cozinha</a>
+        <button class="fav-badge-btn" id="openFavsBtn">
+          ❤️ Favoritos <span class="fav-count" id="favCount">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-tag">Cozinhar é um ato de carinho</span>
+      <h1 class="hero-title">O sabor da comida de verdade, sem complicação.</h1>
+      <p class="hero-subtitle">Descubra receitas didáticas, testadas e pensadas para transformar a sua rotina na cozinha.</p>
+      
+      <!-- SEARCH BAR -->
+      <div class="search-box">
+        <div class="search-input-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" placeholder="Busque por receita ou ingrediente (ex: arroz, frango, bolo)..." />
+        </div>
+        <button class="btn-primary" id="searchBtn">Buscar</button>
+      </div>
+
+      <!-- QUICK FILTERS -->
+      <div class="quick-tags">
+        <span class="tag-label">Filtros rápidos:</span>
+        <button class="filter-chip active" data-filter="all">Todas</button>
+        <button class="filter-chip" data-filter="rapida">⚡ Até 30 min</button>
+        <button class="filter-chip" data-filter="doce">🍰 Sobremesas</button>
+        <button class="filter-chip" data-filter="almoco">🥘 Almoço de Domingo</button>
+        <button class="filter-chip" data-filter="leve">🥗 Leve & Prático</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTAINER -->
+  <main class="main-container">
+    
+    <!-- RECIPES GRID SECTION -->
+    <section id="receitas" class="section-recipes">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Receitas em Destaque</h2>
+          <p class="section-desc">Passo a passo sem segredos para dar certo de primeira.</p>
+        </div>
+      </div>
+
+      <div class="recipes-grid" id="recipesGrid">
+        <!-- Cards de receitas são renderizados dinamicamente via JS -->
+      </div>
+    </section>
+
+    <!-- BANNER TRUQUE DA COZINHA -->
+    <section id="dicas" class="tip-banner">
+      <div class="tip-content">
+        <span class="tip-badge">💡 Truque de Ouro</span>
+        <h3>Como não chorar ao cortar cebola?</h3>
+        <p>Utilize uma faca super afiada! Quanto mais afiada a lâmina, menos células da cebola são esmagadas e menos gases irritantes são liberados nos seus olhos.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>Cozinha & Afeto</h3>
+        <p>Descomplicando a culinária com receitas reais, didáticas e muito carinho.</p>
+      </div>
+      <div class="footer-links">
+        <p>© 2026 Cozinha & Afeto. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL DE RECEITA DETALHADA -->
+  <div class="modal-overlay" id="recipeModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModalBtn">&times;</button>
+      <div class="modal-body" id="modalContent">
+        <!-- Conteúdo injetado via JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html
